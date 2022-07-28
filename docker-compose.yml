@@ -1,45 +1,17 @@
 version: '3.1'
 
 services:
-  python:
-    image: 22119697/pipline:latest
-    restart: always # This will be ignored if we deploy in docker swarm
-   # environment:
-    #- MONGO_DB_HOSTNAME=mongo
-    #- MONGO_DB_USERNAME=devdb
-    #- MONGO_DB_PASSWORD=devdb123
+  cont29:
+    image: akshaykumar29/
+    restart: always 
     ports:
       - 5000:5000
-    #working_dir: /app
     depends_on:
       - python
     networks:
-    - real11  
-    deploy:  # This will be considered only in docker swarm.
-      replicas: 2
-      #update_config:
-       # parallelism: 1
-        delay: 20s
-      restart_policy:
-        condition: on-failure
-        delay: 10s
-        max_attempts: 5
-
-  #mongo:
-   # image: mongo
-    #environment:
-    #- MONGO_INITDB_ROOT_USERNAME=devdb
-    #- MONGO_INITDB_ROOT_PASSWORD=devdb123
-    #volumes:
-     # - mongodb:/data/db
-    #restart: always
-    #networks:
-    #- springappnetwork
-    
-#volumes:
- # mongodb:
-  #  external: true
-    
+    - akshay11  
+    deploy:  
+      replicas:   
 networks:
-  real11:
-    external: true
+  akshay11:
+   
