@@ -1,2 +1,4 @@
 flask
-mysql-connector-python==8.0.29
+pandas
+redis
+pymongo
